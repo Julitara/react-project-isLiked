@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.products {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+  &__list {
+    text-align: center;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: 1px solid #b5d1dc;
+    background-color: #d9f4ff;
+    border-radius: 20px;
+    padding: 20px 40px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #366f86;
+      color: white;
+    }
+
+    &:active {
+      background-color: #133747;
+    }
+  }
+}

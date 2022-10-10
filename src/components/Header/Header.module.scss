@@ -1,0 +1,24 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #d9f4ff;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 30px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
