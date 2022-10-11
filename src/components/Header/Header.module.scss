@@ -14,6 +14,9 @@
   &__nav {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 485px) {
+      flex-direction: column;
+    }
 
     p {
       font-size: 30px;

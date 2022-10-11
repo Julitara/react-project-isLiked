@@ -1,5 +1,8 @@
 .product__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 100%;
   margin-bottom: 50px;
   background-color: white;
@@ -9,17 +12,31 @@
   h2 {
     margin: 0;
     margin-bottom: 30px;
+    @media (max-width: 974px) {
+      max-width: 70%;
+      font-size: 25px;
+    }
+    @media (max-width: 370px) {
+      max-width: 40%;
+      font-size: 20px;
+    }
   }
 
   img {
     max-width: 50%;
     margin-bottom: 10px;
+    @media (max-width: 974px) {
+      max-width: 40%;
+    }
   }
 
   p {
     margin: 0;
     margin-bottom: 10px;
     font-size: 20px;
+    @media (max-width: 974px) {
+      max-width: 70%;
+    }
   }
 
   span {
@@ -42,6 +59,11 @@
     svg {
       width: 50px;
       height: 50px;
+
+      @media (max-width: 485px) {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &:hover {
@@ -58,6 +80,11 @@
     height: 50px;
     cursor: pointer;
     transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    @media (max-width: 485px) {
+      width: 40px;
+      height: 40px;
+    }
     g {
       fill: black;
     }
