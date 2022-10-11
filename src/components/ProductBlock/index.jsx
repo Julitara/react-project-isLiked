@@ -22,7 +22,7 @@ function ProductBlock({ title, description, price, image, id }) {
       dispatch(removeFavorite(id));
       setProductFavorite(false);
     } else {
-      dispatch(setFavorite(id));
+      dispatch(setFavorite({ title, description, price, image, id }));
       setProductFavorite(true);
     }
   };

@@ -5,7 +5,7 @@ import './scss/app.scss';
 import Header from './components/Header';
 import Home from './pages/Home';
 
-const Products = React.lazy(() => import(/* webpackChunkName: 'News'*/ './pages/Products'));
+const Products = React.lazy(() => import(/* webpackChunkName: 'Products'*/ './pages/Products'));
 
 function App() {
   return (

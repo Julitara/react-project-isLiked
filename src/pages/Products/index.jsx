@@ -13,7 +13,7 @@ function Products() {
 
   const dispatch = useDispatch();
   const { items, status } = useSelector(selectProduct);
-  const favorite = useSelector(selectFavorite);
+  const { favorite } = useSelector(selectFavorite);
 
   React.useEffect(() => {
     dispatch(fetchProduct());
@@ -21,7 +21,7 @@ function Products() {
 
   const onClickFilter = () => {
     dispatch(setFilterFavorite(favorite));
-    setOnFilterFavorite(true);
+    setOnFilterFavorite((prevValue) => !prevValue);
   };
 
   React.useEffect(() => {
@@ -31,6 +31,9 @@ function Products() {
   });
 
   const product = items.map((obj) => <ProductBlock key={obj.id} {...obj} />);
+  const favoriteProducts = favorite.length
+    ? favorite.map((obj) => <ProductBlock key={obj.id} {...obj} />)
+    : null;
 
   return (
     <main id="main" aria-label="Основной контент страницы">
@@ -47,7 +50,11 @@ function Products() {
             </div>
           ) : (
             <ul className={style.products__list}>
-              {status === 'loading' ? 'Загрузка карточек товара' : product}
+              {status === 'loading'
+                ? 'Загрузка карточек товара'
+                : onFilterFavorite
+                ? favoriteProducts
+                : product}
             </ul>
           )}
         </section>
