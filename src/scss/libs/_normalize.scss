@@ -12,15 +12,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: black;
-  min-width: 320px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  background-color: #ffe6c8;
-}
+
 
 a,
 span,
@@ -56,4 +48,14 @@ a {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: black;
+  min-width: 320px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: #ffe6c8;
 }
